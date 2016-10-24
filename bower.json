@@ -1,0 +1,22 @@
+{
+  "name": "Restart template",
+  "authors": [
+    "Anton Zimnitski <zimniros@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "normalize-css": "normalize.css#^5.0.0",
+    "susy": "^2.2.12"
+  }
+}
