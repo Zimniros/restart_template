@@ -254,20 +254,33 @@ h1 {
 
   width: span(2.5);
   margin: 0 auto;
+  padding: 16px 0;
+
   text-transform: uppercase;
+
   color: #000;
   background: $second-color;
+
   font-weight: bold;
-  padding: 16px 0;
+
+  &:hover, &:active {
+    color: $main-color;
+    background: #60c48f;
+  }
+  &:active {
+    border-top: 3px solid #49966d;
+  }
 }
 
 /***********************************************
                 #testimonials
 ***********************************************/
 .testimonials {
-  background: #f6f6f6;
-  text-align: center;
   padding: 81px 0 76px;
+
+  text-align: center;
+
+  background: #f6f6f6;
 }
 
 .testimonials__title {
@@ -276,43 +289,80 @@ h1 {
 
 .testimonials__slider {
   position: relative;
-  height: 200px;
+
+  overflow: hidden;
+
+  min-height: 200px;
 }
 
 .slider__item {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: none;
+
   width: 100%;
   height: 100%;
-  z-index: 1;
-  opacity: 0;
 
-  transition: opacity 1s;
-
+  animation: slidein .6s ease-in;
 }
 
 .slider__item--showing {
-    opacity: 1;
-    z-index: 2;
+  display: block;
 }
 
 .slider__text {
+  margin-bottom: 35px;
+
   font-size: 1.5rem;
   font-style: italic;
-  margin-bottom: 35px;
 }
 
 .slider__author {
-  font-weight: bold;
   text-transform: uppercase;
+
+  font-weight: bold;
 }
 
 .slider__author-about {
+  font-size: .875rem;
   font-style: italic;
-  font-size: .875rem;
 
   &::before {
     content: '~';
+  }
+}
+
+.pagination__item {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background: #ccc;
+
+  font-size: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pagination__item--showing {
+  background: #959595;
+}
+/************************************
+          animation
+************************************/
+
+@keyframes slidein {
+  from {
+    width: 300%;
+    margin-left: 100%;
+  }
+  to {
+    width: 100%;
+    margin-left: 0;
   }
 }
