@@ -91,7 +91,7 @@ p {
 .top-nav__item {
   display: inline-block;
 
-  margin-left: 2.750em;
+  margin-left: 2.55em;
 }
 
 .top-nav__link {
@@ -106,7 +106,7 @@ p {
 }
 
 .hero-title {
-  padding: 20rem 0;
+  padding: 19.5rem 0;
 
   text-align: center;
 
@@ -120,13 +120,13 @@ p {
                 #about
 ***********************************************/
 .about {
-  padding: 88px 0;
+  padding: 81px 0 108px;
 
   text-align: center;
 }
 
 .about__title {
-  margin-bottom: 68px;
+  margin-bottom: 56px;
 
   text-transform: uppercase;
 
@@ -135,26 +135,33 @@ p {
 }
 
 .about__text {
-  margin: 0 110px;
+  margin: 0 100px;
 }
 
-.features {
-  margin-top: 180px;
+/***********************************************
+                service
+***********************************************/
 
+.service {
+  padding: 85px 0 40px;
+  background: #f6f6f6;
   @include susy-clearfix;
+
 }
 
-.features__item {
+.service__item {
   position: relative;
 
+  text-align: center;
   @include gallery(2 of 8);
 }
-.features__item--travel::before,
-.features__item--dest::before,
-.features__item--map::before,
-.features__item--spot::before {
+
+.service__item--travel::before,
+.service__item--dest::before,
+.service__item--map::before,
+.service__item--spot::before {
   position: absolute;
-  top: -80px;
+  top: -86px;
   left: 50%;
 
   display: block;
@@ -172,25 +179,26 @@ p {
    }
 }
 
-.features__item--travel::before {
+.service__item--travel::before {
   background-position: 0 0;
 }
-.features__item--dest::before {
+.service__item--dest::before {
   background-position: -50px 0;
 }
-.features__item--map::before {
+.service__item--map::before {
   background-position: -100px 0;
 }
-.features__item--spot::before {
+.service__item--spot::before {
   background-position: -150px 0;
 }
 
-.features__title {
-  margin-bottom: 45px;
+.service__title {
+  margin-bottom: 42px;
 
   font-size: 1.125rem;
 }
 
-.features__text {
+.service__text {
   font-size: 0.875rem;
+  line-height: 2;
 }
