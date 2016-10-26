@@ -1,2 +1,89 @@
 @import "../bower_components/susy/sass/_susy.scss";
 @import "../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+$susy: ( columns: 12, gutters: .25, container: 960px, math: fluid, output: float,debug: ( image: show-columns, color: rgba(224,58,185,.7), output: overlay, toggle: top right, ), );
+$main-color: #fff;
+$second-color: #7dffba;
+$dark-grey: #555;
+$light-gray: #777;
+$dark-blue: #131a1d;
+
+.main-container {
+  @include container;
+}
+body {
+  font-family: 'Open sans', sans-serif, serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1.643;
+}
+/***********************************************
+                #header
+***********************************************/
+.header {
+  background: $light-gray url('../img/header-bg.jpg');
+  background-size: cover;
+}
+
+.top-bar {
+  background: #000;
+  opacity: 0.8;
+  padding: 26px 0;
+  @include susy-clearfix;
+}
+
+.top-logo {
+  @include span(3);
+}
+
+.top-logo img {
+  vertical-align: middle;
+}
+
+.top-nav {
+  @include span(8 last);
+  text-align: right;
+}
+
+.top-nav__item {
+  display: inline-block;
+  margin-left: 2.750em;
+}
+
+.top-nav__link {
+  color: $main-color;
+  vertical-align: middle;
+
+  &:active,
+  &:hover {
+    color: $second-color;
+  }
+}
+
+.hero-title {
+  padding: 20rem 0;
+  color: $second-color;
+  text-align: center;
+  font-size: 4.375rem;
+  font-family: 'Kaushan Script', cursive;
+}
