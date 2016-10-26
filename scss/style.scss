@@ -1,6 +1,7 @@
 @import "../bower_components/susy/sass/_susy.scss";
 @import "../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
-$susy: ( columns: 12, gutters: .25, container: 960px, math: fluid, output: float,debug: ( image: show-columns, color: rgba(224,58,185,.7), output: overlay, toggle: top right, ), );
+
+$susy: (columns: 12, gutters: 0.25, container: 960px, math: fluid, output: float, debug: (image: show-columns, color: rgba(224, 58, 185, 0.7), output: overlay, toggle: top right));
 $main-color: #fff;
 $second-color: #7dffba;
 $dark-grey: #555;
@@ -10,6 +11,7 @@ $dark-blue: #131a1d;
 .main-container {
   @include container;
 }
+
 body {
   font-family: 'Open sans', sans-serif, serif;
   font-size: 16px;
@@ -34,21 +36,41 @@ ul {
 a {
   text-decoration: none;
   text-transform: uppercase;
+
   font-size: 0.875rem;
   line-height: 1.643;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-grey;
+}
+
+p {
+  color: $light-gray;
+
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 /***********************************************
                 #header
 ***********************************************/
 .header {
-  background: $light-gray url('../img/header-bg.jpg');
+  background: $light-gray url("../img/header-bg.jpg");
   background-size: cover;
 }
 
 .top-bar {
-  background: #000;
-  opacity: 0.8;
   padding: 26px 0;
+
+  opacity: 0.8;
+  background: #000;
+
   @include susy-clearfix;
 }
 
@@ -61,18 +83,21 @@ a {
 }
 
 .top-nav {
-  @include span(8 last);
   text-align: right;
+
+  @include span(8 last);
 }
 
 .top-nav__item {
   display: inline-block;
+
   margin-left: 2.750em;
 }
 
 .top-nav__link {
-  color: $main-color;
   vertical-align: middle;
+
+  color: $main-color;
 
   &:active,
   &:hover {
@@ -82,8 +107,90 @@ a {
 
 .hero-title {
   padding: 20rem 0;
-  color: $second-color;
+
   text-align: center;
-  font-size: 4.375rem;
+
+  color: $second-color;
+
   font-family: 'Kaushan Script', cursive;
+  font-size: 4.375rem;
+}
+
+/***********************************************
+                #about
+***********************************************/
+.about {
+  padding: 88px 0;
+
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 68px;
+
+  text-transform: uppercase;
+
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.about__text {
+  margin: 0 110px;
+}
+
+.features {
+  margin-top: 180px;
+
+  @include susy-clearfix;
+}
+
+.features__item {
+  position: relative;
+
+  @include gallery(2 of 8);
+}
+.features__item--travel::before,
+.features__item--dest::before,
+.features__item--map::before,
+.features__item--spot::before {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  content: '';
+  transform: translateX(-50%);
+
+  background: url("../img/sprite.png") no-repeat;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
+     background: url("../img/sprite@2.png") no-repeat;
+     background-size: 200px 150px;
+   }
+}
+
+.features__item--travel::before {
+  background-position: 0 0;
+}
+.features__item--dest::before {
+  background-position: -50px 0;
+}
+.features__item--map::before {
+  background-position: -100px 0;
+}
+.features__item--spot::before {
+  background-position: -150px 0;
+}
+
+.features__title {
+  margin-bottom: 45px;
+
+  font-size: 1.125rem;
+}
+
+.features__text {
+  font-size: 0.875rem;
 }
