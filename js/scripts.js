@@ -1,3 +1,5 @@
+//@prepros-append smooth-scroll.min.js
+
 var slides = document.querySelectorAll('#testimonials__slider .slider__item');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide,2000);

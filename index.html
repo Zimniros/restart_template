@@ -25,19 +25,19 @@
         <!-- end of . -->
         <ul class="top-nav">
           <li class="top-nav__item">
-            <a href="#about" class="top-nav__link">About</a>
+            <a data-scroll href="#about" class="top-nav__link">About</a>
           </li>
           <li class="top-nav__item">
-            <a href="#service" class="top-nav__link">Service</a>
+            <a data-scroll href="#service" class="top-nav__link">Service</a>
           </li>
           <li class="top-nav__item">
-            <a href="#portfolio" class="top-nav__link">Portfolio</a>
+            <a data-scroll href="#portfolio" class="top-nav__link">Portfolio</a>
           </li>
           <li class="top-nav__item">
-            <a href="#" class="top-nav__link">Testimonial</a>
+            <a data-scroll href="#testimonials" class="top-nav__link">Testimonial</a>
           </li>
           <li class="top-nav__item">
-            <a href="#" class="top-nav__link">Contact</a>
+            <a data-scroll href="#" class="top-nav__link">Contact</a>
           </li>
         </ul>
         <!-- end of .top-nav -->
@@ -134,7 +134,10 @@
   </section>
   <!-- end of .testimonials -->
 
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts-min.js"></script>
+  <script>
+    smoothScroll.init();
+  </script>
 </body>
 
 </html>
