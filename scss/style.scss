@@ -95,13 +95,13 @@ h1 {
   @include span(8 last);
 }
 
-.top-nav__item {
+.nav__item {
   display: inline-block;
 
   margin-left: 2.55em;
 }
 
-.top-nav__link {
+.nav__link {
   vertical-align: middle;
 
   color: $main-color;
@@ -351,6 +351,166 @@ h1 {
 
 .pagination__item--showing {
   background: #959595;
+}
+
+/***********************************************
+                #footer
+***********************************************/
+
+.footer {
+  padding: 90px 0 94px;
+
+  text-align: center;
+
+  background: $dark-blue;
+}
+
+.footer__social {
+  margin: 0 auto;
+}
+
+.social__item {
+  display: inline-block;
+
+  margin-right: 9px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  background: url("../img/sprite.png") no-repeat;
+
+  font-size: 0;
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
+     background: url("../img/sprite@2.png") no-repeat;
+     background-size: 200px 150px;
+   }
+}
+
+.social__link--facebook {
+  background-position: 0 -50px;
+
+  &:hover, &:active {
+    background-position: 0 -100px;
+  }
+}
+
+.social__link--twitter {
+  background-position: -50px -50px;
+
+  &:hover, &:active {
+    background-position: -50px -100px;
+  }
+}
+
+.social__link--linkedin {
+  background-position: -100px -50px;
+
+  &:hover, &:active {
+    background-position: -100px -100px;
+  }
+}
+
+.footer__title {
+  position: relative;
+
+  margin-top: 29px;
+  padding-bottom: 34px;
+
+  color: $main-color;
+
+  &::after{
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+
+    display: block;
+
+    width: 87px;
+    height: 6px;
+
+    content: '';
+    transform: translateX(-50%);
+
+    background: $second-color;
+  }
+}
+
+.footer__nav {
+  margin-top: 37px;
+}
+
+.footer__nav .nav__item {
+  margin: 0;
+  padding: 0 23px;
+
+  border-right: 2px solid $main-color;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+/***********************************************
+                #footer
+***********************************************/
+.copyright {
+  padding: 24px 0 26px;
+
+  @include susy-clearfix;
+}
+
+.copyright__text {
+  display: inline-block;
+
+  font-size: .75rem;
+  line-height: 2.214;
+}
+
+.copyright__to-top {
+  position: relative;
+
+  display: block;
+
+  width: 31px;
+  height: 31px;
+
+  background: #eee;
+  transition: background .7s;
+
+  @include last;
+  &::after {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    content: '';
+    transform: translateX(-50%) rotate(45deg) ;
+
+    border: 2px solid $dark-grey;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  &:hover, &:active {
+    background: $dark-grey;
+  }
+  &:hover::after, &:active::after {
+    border-top-color: #eee;
+    border-left-color: #eee;
+  }
+
 }
 /************************************
           animation

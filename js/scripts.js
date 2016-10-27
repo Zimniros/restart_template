@@ -2,7 +2,7 @@
 
 var slides = document.querySelectorAll('#testimonials__slider .slider__item');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
+var slideInterval = setInterval(nextSlide,7000);
 
 function goToSlide(n){
 	slides[currentSlide].className = 'slider__item';
@@ -29,7 +29,7 @@ function pauseSlideshow(){
 
 function playSlideshow(){
 	playing = true;
-	slideInterval = setInterval(nextSlide,2000);
+	slideInterval = setInterval(nextSlide,7000);
 }
 
 (function(){

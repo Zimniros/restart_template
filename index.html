@@ -16,28 +16,28 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="top-bar">
       <div class="main-container">
         <a href="#" class="top-logo">
           <img src="img/logo.png" alt="Logo">
         </a>
-        <!-- end of . -->
-        <ul class="top-nav">
-          <li class="top-nav__item">
-            <a data-scroll href="#about" class="top-nav__link">About</a>
+        <!-- end of .top-logo -->
+        <ul class="top-nav nav">
+          <li class="nav__item">
+            <a data-scroll href="#about" class="nav__link">About</a>
           </li>
-          <li class="top-nav__item">
-            <a data-scroll href="#service" class="top-nav__link">Service</a>
+          <li class="nav__item">
+            <a data-scroll href="#service" class="nav__link">Service</a>
           </li>
-          <li class="top-nav__item">
-            <a data-scroll href="#portfolio" class="top-nav__link">Portfolio</a>
+          <li class="nav__item">
+            <a data-scroll href="#portfolio" class="nav__link">Portfolio</a>
           </li>
-          <li class="top-nav__item">
-            <a data-scroll href="#testimonials" class="top-nav__link">Testimonial</a>
+          <li class="nav__item">
+            <a data-scroll href="#testimonials" class="nav__link">Testimonial</a>
           </li>
-          <li class="top-nav__item">
-            <a data-scroll href="#" class="top-nav__link">Contact</a>
+          <li class="nav__item">
+            <a data-scroll href="#footer" class="nav__link">Contact</a>
           </li>
         </ul>
         <!-- end of .top-nav -->
@@ -134,6 +134,50 @@
   </section>
   <!-- end of .testimonials -->
 
+  <footer class="footer" id="footer">
+    <div class="main-container">
+      <ul class="footer__social">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--facebook">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--twitter">Twitter</a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--linkedin">LinkedIn</a>
+        </li>
+      </ul>
+      <!-- end of .footer__social -->
+      <h1 class="footer__title">Get in touch with us.</h1>
+      <ul class="footer__nav nav">
+        <li class="nav__item">
+          <a data-scroll href="#about" class="nav__link">About</a>
+        </li>
+        <li class="nav__item">
+          <a data-scroll href="#service" class="nav__link">Service</a>
+        </li>
+        <li class="nav__item">
+          <a data-scroll href="#portfolio" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a data-scroll href="#testimonials" class="nav__link">Testimonial</a>
+        </li>
+        <li class="nav__item">
+          <a data-scroll href="#footer" class="nav__link">Contact</a>
+        </li>
+      </ul>
+      <!-- end of .footer-nav -->
+    </div>
+    <!-- end of .main-container -->
+  </footer>
+  <!-- end of .footer -->
+  <div class="main-container">
+    <footer class="copyright">
+      <p class="copyright__text">RESTART / Copyright &copy; 2016 ADCADESIGNS.CO.NF, All Rights Reserved</p>
+      <a data-scroll href="#header" class="copyright__to-top"></a>
+    </footer>
+    <!-- end of .copyright -->
+  </div>
   <script src="js/scripts-min.js"></script>
   <script>
     smoothScroll.init();
