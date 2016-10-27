@@ -8,6 +8,9 @@ $dark-grey: #555;
 $light-gray: #777;
 $dark-blue: #131a1d;
 
+$wide-break: max-width 850px;
+$small-break: max-width 650px;
+
 .main-container {
   @include container;
 }
@@ -79,6 +82,7 @@ h1 {
   background: #000;
 
   @include susy-clearfix;
+
 }
 
 .top-logo {
@@ -101,6 +105,12 @@ h1 {
   margin-left: 2.55em;
 }
 
+.top-nav .nav__item {
+    @include breakpoint($wide-break) {
+      margin-left: .5em;
+    }
+}
+
 .nav__link {
   vertical-align: middle;
 
@@ -113,7 +123,7 @@ h1 {
 }
 
 .hero-title {
-  padding: 19.5rem 0;
+  padding: 19.5rem 2rem;
 
   text-align: center;
 
@@ -121,6 +131,10 @@ h1 {
 
   font-family: 'Kaushan Script', cursive;
   font-size: 4.375rem;
+
+  @include breakpoint($wide-break) {
+    padding: 10rem 2rem;
+  }
 }
 
 /***********************************************
@@ -130,14 +144,26 @@ h1 {
   padding: 81px 0 108px;
 
   text-align: center;
+
+  @include breakpoint($wide-break) {
+    padding: 40px 0;
+  }
 }
 
 .about__title {
   margin-bottom: 56px;
+
+  @include breakpoint($wide-break) {
+    margin-bottom: 28px;
+  }
 }
 
 .about__text {
   margin: 0 100px;
+
+  @include breakpoint($wide-break) {
+  margin: 0 20px;
+  }
 }
 
 /***********************************************
@@ -150,6 +176,12 @@ h1 {
   background: #f6f6f6;
 
   @include susy-clearfix;
+  @include breakpoint($wide-break) {
+    padding: 55px 0 20px;
+  }
+  @include breakpoint($small-break) {
+    padding-top: 10px;
+  }
 
 }
 
@@ -159,6 +191,11 @@ h1 {
   text-align: center;
 
   @include gallery(2 of 8);
+  @include breakpoint($small-break) {
+    padding-top: 85px;
+
+    @include gallery(4 of 8);
+  }
 }
 
 .service__item--travel::before,
@@ -178,6 +215,10 @@ h1 {
   transform: translateX(-50%);
 
   background: url("../img/sprite.png") no-repeat;
+
+  @include breakpoint($small-break) {
+    top: 25px;
+  }
   @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
      background: url("../img/sprite@2.png") no-repeat;
      background-size: 200px 150px;
@@ -201,6 +242,10 @@ h1 {
   margin-bottom: 42px;
 
   font-size: 1.125rem;
+
+  @include breakpoint($small-break) {
+    margin-bottom: 15px;
+  }
 }
 
 .service__text {
@@ -216,14 +261,26 @@ h1 {
   padding: 90px 0 80px;
 
   text-align: center;
+
+  @include breakpoint($wide-break) {
+    padding: 40px 0 30px;
+  }
 }
 
 .portfolio__title {
   margin-bottom: 45px;
+
+  @include breakpoint($wide-break) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__text {
   margin:0 88px;
+
+  @include breakpoint($wide-break) {
+    margin: 0 30px;
+  }
 }
 
 .gallery {
@@ -239,11 +296,25 @@ h1 {
   font-size: 0;
 
   flex-wrap: wrap;
+  @include breakpoint($wide-break) {
+    max-height: 470px;
+    margin-bottom: 20px;
+  }
+}
+
+.gallery__image--small {
+  @include breakpoint($wide-break) {
+    display: none;
+  }
 }
 
 .gallery__image {
   width: 31.9%;
   margin-right: 2%;
+
+  @include breakpoint($wide-break) {
+    margin-bottom: 0;
+  }
 
   &:nth-child(2n + 1) {
     margin-bottom: 20px;
@@ -281,6 +352,9 @@ h1 {
   text-align: center;
 
   background: #f6f6f6;
+  @include breakpoint($wide-break) {
+    padding: 35px 0 30px;
+  }
 }
 
 .testimonials__title {
@@ -302,6 +376,11 @@ h1 {
   height: 100%;
 
   animation: slidein .6s ease-in;
+
+    @include breakpoint($wide-break) {
+      width: 90%;
+      margin: 0 auto;
+    }
 }
 
 .slider__item--showing {
@@ -347,6 +426,12 @@ h1 {
   &:last-child {
     margin-right: 0;
   }
+
+  @include breakpoint($wide-break) {
+    width: 26px;
+    height: 26px;
+  }
+
 }
 
 .pagination__item--showing {
@@ -363,6 +448,9 @@ h1 {
   text-align: center;
 
   background: $dark-blue;
+  @include breakpoint($wide-break) {
+    padding: 40px 0 40px;
+  }
 }
 
 .footer__social {
@@ -481,8 +569,9 @@ h1 {
   width: 31px;
   height: 31px;
 
-  background: #eee;
   transition: background .7s;
+
+  background: #eee;
 
   @include last;
   &::after {
