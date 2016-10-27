@@ -87,6 +87,9 @@ h1 {
 
 .top-logo {
   @include span(3);
+  @include breakpoint($small-break) {
+    padding-left: 15px;
+  }
 }
 
 .top-logo img {
@@ -97,8 +100,17 @@ h1 {
   text-align: right;
 
   @include span(8 last);
+  @include breakpoint($small-break){
+    display: none;
+  }
 }
 
+.top-nav__menu {
+  font-size: 3rem;
+  color: $main-color;
+  line-height: .5;
+  @include span(2 last);
+}
 .nav__item {
   display: inline-block;
 
@@ -334,6 +346,10 @@ h1 {
 
   font-weight: bold;
 
+  @include breakpoint($small-break) {
+    width: span(4);
+  }
+
   &:hover, &:active {
     color: $main-color;
     background: #60c48f;
@@ -352,6 +368,7 @@ h1 {
   text-align: center;
 
   background: #f6f6f6;
+
   @include breakpoint($wide-break) {
     padding: 35px 0 30px;
   }
@@ -423,13 +440,13 @@ h1 {
 
   font-size: 0;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
   @include breakpoint($wide-break) {
     width: 26px;
     height: 26px;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 
 }
@@ -448,6 +465,7 @@ h1 {
   text-align: center;
 
   background: $dark-blue;
+
   @include breakpoint($wide-break) {
     padding: 40px 0 40px;
   }
@@ -539,6 +557,13 @@ h1 {
   padding: 0 23px;
 
   border-right: 2px solid $main-color;
+
+  @include breakpoint($small-break) {
+    border-right: none;
+
+    font-size: 2rem;
+
+  }
 
   &:last-child {
     border-right: none;
