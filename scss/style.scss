@@ -2,6 +2,8 @@
 @import "../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
 @import "normalize.scss";
 
+$susy: (columns: 12, gutters: 0.25, container: 960px, math: fluid, output: float);
+
 $main-color: #fff;
 $second-color: #7dffba;
 $dark-grey: #555;
