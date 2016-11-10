@@ -1,7 +1,7 @@
 @import "../bower_components/susy/sass/_susy.scss";
 @import "../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "normalize.scss";
 
-$susy: (columns: 12, gutters: 0.25, container: 960px, math: fluid, output: float, debug: (image: show-columns, color: rgba(224, 58, 185, 0.7), output: overlay, toggle: top right));
 $main-color: #fff;
 $second-color: #7dffba;
 $dark-grey: #555;
@@ -20,7 +20,6 @@ $mobile-break: 320px 500px;
 body {
   font-family: 'Open sans', sans-serif, serif;
   font-size: 16px;
-  // overflow: hidden;
 }
 
 h1,
@@ -203,8 +202,7 @@ h1 {
 
     content: " ";
 
-    opacity: 0.8;
-    background: #000;
+    background: rgba(0,0,0,.8);
   }
 }
 
