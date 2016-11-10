@@ -56,3 +56,18 @@ function playSlideshow() {
   }
 
 })();
+
+
+var menu = document.getElementById('menu');
+var topNav = document.getElementById('top-nav');
+var overlay = document.getElementById('overlay');
+
+menu.addEventListener('click', function(e){
+  e.preventDefault();
+  topNav.classList.toggle('top-nav--open');
+});
+
+overlay.addEventListener('click', function(e){
+  e.preventDefault();
+  topNav.classList.toggle('top-nav--open');
+});
