@@ -389,62 +389,45 @@ h1 {
 }
 
 .gallery {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  flex-direction: column;
+  margin: 70px 0 82px;
 
-  max-height: 710px;
-  margin-top: 63px;
-  margin-bottom: 80px;
+  column-count: 3;
+  column-gap: 20px;
 
-  font-size: 0;
-
-  flex-wrap: wrap;
-  @include breakpoint($wide-break) {
-    flex-direction: row;
-
-    margin-bottom: 20px;
-
-    flex-wrap: nowrap;
-  }
   @include breakpoint($mobile-break){
-    flex-direction: column;
+    column-count: auto;
+  }
+
+  //WORKAROUND FOR IE
+  @media all and (-ms-high-contrast:none) {
+    margin-bottom: 0;
   }
 }
 
+.gallery__image {
+  display: block;
+
+  width: 100%;
+
+  break-inside: avoid;
+}
+
 .gallery__image--small {
-  @include breakpoint($wide-break) {
+  @include breakpoint($small-break) {
     display: none;
   }
-  @include breakpoint($small-break) {
+
+  @include breakpoint($mobile-break){
     display: block;
   }
 }
 
 .gallery__image--big {
-  @include breakpoint($small-break) {
+  @include breakpoint($mobile-break){
     display: none;
   }
 }
 
-.gallery__image {
-  width: 31.9%;
-  margin-right: 2%;
-
-    @include breakpoint($mobile-break){
-      width: 100%;
-      margin-right: 0;
-    }
-
-  &:nth-child(2n + 1) {
-    margin-bottom: 20px;
-
-    @include breakpoint($wide-break) {
-      margin-bottom: 0;
-    }
-  }
-}
 .portfolio__more-link {
   display: block;
 
